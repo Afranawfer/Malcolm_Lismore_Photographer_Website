@@ -75,3 +75,58 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* Mobile-first approach */
+body {
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px 20px;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    margin: 20px 0;
+}
+
+/* Media Query for tablets and larger devices */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    /* For pricing cards to sit side-by-side on larger screens */
+    .pricing-card {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        margin-right: 5%;
+    }
+
+    .pricing-card:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Media Query for desktops */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
