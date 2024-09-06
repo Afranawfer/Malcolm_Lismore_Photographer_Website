@@ -45,6 +45,11 @@ nav ul li a:hover {
 
 .hero h1 {
     font-size: 3rem;
+    color: white;
+}
+
+.hero p{
+    color: white;
 }
 
 .cta-button {
