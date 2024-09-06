@@ -14,7 +14,55 @@
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: 100% 100%;
-          opacity: 0.5;
+          opacity: 0.3;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        section {
+          float: left;
+          width: 30%;
+          height: 300px; /* only for demonstration, should be removed */
+          background: #ccc;
+          padding: 20px;
+        }
+
+        .about {
+          float: left;
+          padding: 20px;
+          width: 70%;
+          background-color: #f1f1f1;
+          height: 300px; /* only for demonstration, should be removed */
+        }
+        
+        /* Clear floats after the columns */
+        section::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Style the footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: flex;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+          section {
+            width: 100%;
+            height: auto;
+          }
         }
     </style>
 </head>
@@ -31,9 +79,12 @@
         </nav>
     </header>
 
+    <section class="icon">
+        <img src="gallery/images/malcolm.jpg" alt="Malcolm Lismore in action"> <!-- Include Malcolm's image -->
+    </section>
     <section class="about">
-        <h1>About Malcolm</h1>
-        <p>Malcolm Lismore is a passionate photographer from the North West coast of Scotland. With a deep love for nature, his work showcases the raw beauty of Scotland’s landscapes and wildlife. Over the years, Malcolm has developed a reputation for his stunning wedding and event photography, capturing special moments with a natural and artistic touch.</p>
+        <h1 style="color: white;">About Malcolm</h1>
+        <p style="color: white;">Malcolm Lismore is a passionate photographer from the North West coast of Scotland. With a deep love for nature, his work showcases the raw beauty of Scotland’s landscapes and wildlife. Over the years, Malcolm has developed a reputation for his stunning wedding and event photography, capturing special moments with a natural and artistic touch.</p>
         <img src="gallery/images/malcolm.jpg" alt="Malcolm Lismore in action"> <!-- Include Malcolm's image -->
     </section>
 
