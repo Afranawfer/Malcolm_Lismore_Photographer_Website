@@ -132,9 +132,3 @@ nav ul li {
     }
 }
 
-/* Image grid for the gallery */
-.gallery-item:hover {
-    opacity: 0.7;
-}
-
-
