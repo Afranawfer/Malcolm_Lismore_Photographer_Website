@@ -23,3 +23,24 @@ lightbox.addEventListener('click', (e) => {
         lightbox.style.display = 'none';
     }
 });
+
+
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const eventDate = document.getElementById('date').value;
+
+    if (name === '' || email === '' || eventDate === '') {
+        alert("Please fill in all required fields.");
+        return false; // Prevent form submission
+    }
+
+    // Basic email format validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    return true; // Allow form submission
+}
